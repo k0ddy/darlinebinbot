@@ -24,7 +24,7 @@ if(strpos($message, "/iban ") === 0){
     if($antispam != False){
       bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"[<u>ANTI SPAM</u>] Try again after <b>$antispam</b>s.",
+        'text'=>"[<u>ANTI SPAM</u>] Vuelve a intentar despues de <b>$antispam</b>s.",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id,
       ]);
@@ -33,7 +33,7 @@ if(strpos($message, "/iban ") === 0){
     }else{
         $messageidtoedit1 = bot('sendmessage',[
           'chat_id'=>$chat_id,
-          'text'=>"<b>Wait for Result...</b>",
+          'text'=>"<b>Espera un momento..</b>",
           'parse_mode'=>'html',
           'reply_to_message_id'=> $message_id,
 
@@ -66,7 +66,7 @@ if(strpos($message, "/iban ") === 0){
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"IBAN -LIVE ✅ <code>$iban</code> - [ RESPONSE: <b>This is a valid IBAN.</b> ]
+                'text'=>"IBAN -LIVE ✅ <code>$iban</code> - [ RESPONSE: <b>Este es un IBAN valido.</b> ]
 <ins>BIC:</ins>  <code>$bic</code>
 <ins>Bank Code:</ins>  <code>$bankcode1</code>
 <ins>Bank:</ins>  <b>$bankname</b>
@@ -74,7 +74,7 @@ if(strpos($message, "/iban ") === 0){
 <ins>Time:</ins>  <code>$timetaken</code><code>s</code>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/KoddyL'>ak018</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
@@ -83,12 +83,12 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"IBAN -DEAD ❌ <code>$iban</code> - [ RESPONSE: <b>This is a Invalid IBAN.</b> ]
+                'text'=>"IBAN -DEAD ❌ <code>$iban</code> - [ RESPONSE: <b>Este es un IBAN invalido.</b> ]
 <ins>Time:</ins>  <code>$timetaken</code><code>s</code>
 <b>━━━━━━━━━━</b>
 
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/ak018'>ak018</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
@@ -98,9 +98,9 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
           bot('editMessageText',[
             'chat_id'=>$chat_id,
             'message_id'=>$messageidtoedit,
-            'text'=>"<b>Never Gonna Give you Up!
+            'text'=>"<b>¡Nunca va a dar!
 
-Provide a Valid SK KEYYYY!</b>",
+¡Proporcione una SK KEYYYY válida!</b>",
             'parse_mode'=>'html',
             'disable_web_page_preview'=>'true'
             

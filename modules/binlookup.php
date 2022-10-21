@@ -24,7 +24,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
     if($antispam != False){
       bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"[<u>ANTI SPAM</u>] Try again after <b>$antispam</b>s.",
+        'text'=>"[<u>ANTI SPAM</u>] Vuelve a intentar despues de <b>$antispam</b>s.",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id
       ]);
@@ -33,7 +33,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
     }else{
         $messageidtoedit1 = bot('sendmessage',[
           'chat_id'=>$chat_id,
-          'text'=>"<b>Wait for Result...</b>",
+          'text'=>"<b>Espera un momento...</b>",
           'parse_mode'=>'html',
           'reply_to_message_id'=> $message_id
 
@@ -101,7 +101,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"<b>❌ INVALID BIN LENGTH ❌</b>
+                'text'=>"<b>❌ Logitud del BIN invalida ❌</b>
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>",
                 'parse_mode'=>'html',
                 'reply_to_message_id'=> $message_id]);}
@@ -120,7 +120,7 @@ Country: <b><ins>$bname</ins> - 💲<ins>$currency</ins></b>
 Issuers Contact: <b><ins>$phone</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/KoddyL'>ak018</a></b>",
               'parse_mode'=>'html',
               'reply_to_message_id'=> $message_id,
               'disable_web_page_preview'=>'true']);}
@@ -129,7 +129,7 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"<b>❌ INVALID BIN ❌</b>
+                'text'=>"<b>❌ BIN INVALIDO ❌</b>
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
@@ -140,9 +140,7 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
           bot('editMessageText',[
             'chat_id'=>$chat_id,
             'message_id'=>$messageidtoedit,
-            'text'=>"<b>Never Gonna Give you Up!
-
-Provide a Bin!</b>",
+            'text'=>"<b>Nunca va a funcionar. Escribe un BIN!!!</b>",
             'parse_mode'=>'html',
             'disable_web_page_preview'=>'true'
             

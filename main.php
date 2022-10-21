@@ -33,22 +33,25 @@ if(strpos($message, "/start") === 0){
 if(!isBanned($userId) && !isMuted($userId)){
 
   if($userId == $config['adminID']){
-    $messagesec = "<b>Type /admin to know admin commands</b>";
+    $messagesec = "<b>Escribe /admin para ver los comandos de administrador</b>";
   }
 
     addUser($userId);
     bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"<b>Hello @$username,
+        'text'=>"<b>Hola @$username,
 
-Escribe /cmds para ver todos los comandos.</b>
+Escribe /cmds para ver todos los comandos</b>
 
 $messagesec",
 	'parse_mode'=>'html',
 	'reply_to_message_id'=> $message_id,
     'reply_markup'=>json_encode(['inline_keyboard' => [
         [
-          ['text' => "💠 Created By 💠", 'url' => "t.me/@KoddyL"]
+          ['text' => "💠 Created By 💠", 'url' => "t.me/KoddyL"]
+        ],
+        [
+          ['text' => "💎 Source Code 💎", 'url' => "github/k0ddy"]
         ],
       ], 'resize_keyboard' => true])
         
@@ -63,7 +66,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
   if(!isBanned($userId) && !isMuted($userId)){
     bot('sendmessage',[
     'chat_id'=>$chat_id,
-    'text'=>"<b>Cuales comandos te gustaria ver</b>",
+    'text'=>"<b>¿Qué comandos le gustaría comprobar?</b>",
     'parse_mode'=>'html',
     'reply_to_message_id'=> $message_id,
     'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -78,7 +81,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>Which commands would you like to check?</b>",
+    'text'=>"<b>¿Qué comandos le gustaría comprobar?</b>",
     'parse_mode'=>'html',
     'reply_markup'=>json_encode(['inline_keyboard'=>[
     [['text'=>"💳 CC Checker Gates",'callback_data'=>"checkergates"]],[['text'=>"🛠 Other Commands",'callback_data'=>"othercmds"]],
@@ -98,7 +101,8 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
 
 <b>/apikey sk_live_xxx - Add SK Key for /schk gate</b>
 <b>/myapikey | !myapikey - View the added SK Key for /schk gate</b>
-",
+
+<b>ϟ Join <a href='t.me/IndianBots'>IndianBots</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
     'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -120,7 +124,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
 <b>/bin | !bin</b> - Bin Lookup
 <b>/iban | !iban</b> - IBAN Checker
   
-  <b>ϟ Join <a href='t.me/IndianBots'>IndianBots</a></b>",
+  <b>ϟ Join <a href='t.me/KoddyL'>ak018</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
     'reply_markup'=>json_encode(['inline_keyboard'=>[

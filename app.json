@@ -1,5 +1,5 @@
 {
-    "name": "Darlinebinbot",
+    "name": "SDMN Checker Bot",
     "description": "A Telegram CC Checker Bot with hella lotta features.",
     "logo": "https://pbs.twimg.com/profile_images/1252291883793027074/RfEhm8yV_400x400.jpg",
     "keywords": [
@@ -7,8 +7,8 @@
         "Bot",
         "Modular"
     ],
-    "website": "https://telegram.me/SDMN_CheckerBot",
-    "repository": "https://github.com/iam-NVN/SDMN_CheckerBot",
+    "website": "https://telegram.me/KoddyL",
+    "repository": "https://github.com/k0ddy",
     "env": {
         "BOT_TOKEN": {
             "description": "Enter your Bot Token Here. Get it from @Botfather",
@@ -47,7 +47,7 @@
         },
         "ANTISPAM_TIMER": {
             "description": "AntiSpam Timer Value in seconds",
-            "value":"1",
+            "value":"20",
             "required": true
         },
         "SK_KEYS": {

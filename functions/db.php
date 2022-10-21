@@ -45,7 +45,7 @@ function isBanned($userID){
     if($userData['is_banned'] == "True"){
         bot('sendmessage',[
             'chat_id'=>$chat_id,
-            'text'=>"<b>Hehe Boi! Suck your Mum</b>",
+            'text'=>"<b>BANEADO POR PUTA JJAJAJAJAJA</b>",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id
         ]);

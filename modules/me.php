@@ -26,7 +26,7 @@ if(strpos($message, "/me") === 0 || strpos($message, "!me") === 0){
     if($antispam != False){
       bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"[<u>ANTI SPAM</u>] Try again after <b>$antispam</b>s.",
+        'text'=>"[<u>ANTI SPAM</u>] Vuelve a intentar despues de <b>$antispam</b>s.",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id
       ]);
@@ -37,9 +37,9 @@ if(strpos($message, "/me") === 0 || strpos($message, "!me") === 0){
           'chat_id'=>$chat_id,
           'text'=>"≡ <b>User Info</b>
 - <ins>User ID:</ins> <code>$userId</code>
-- <ins>Full Name:</ins> ".htmlspecialchars($firstname.$lastname)."
-- <ins>User Name:</ins> @$username
-- <ins>User Type:</ins> <b>Free User</b>
+- <ins>Nombre Completo:</ins> ".htmlspecialchars($firstname.$lastname)."
+- <ins>Nombre de usuario:</ins> @$username
+- <ins>Tipo de usuario:</ins> <b>Free User</b>
 ━━━━━━━━━━━━━=
 <b>$date1 $time</b>",
           'parse_mode'=>'html',
@@ -84,9 +84,9 @@ if($data == "backme"){
     'message_id'=>$callbackmessageid,
     'text'=>"≡ <b>User Info</b>
 - <ins>User ID:</ins> <code>$callbackuserid</code>
-- <ins>Full Name:</ins> ".htmlspecialchars($callbackfname.$callbacklname)."
-- <ins>User Name:</ins> @$callbackusername
-- <ins>User Type:</ins> <b>Free User</b>
+- <ins>Nombre:</ins> ".htmlspecialchars($callbackfname.$callbacklname)."
+- <ins>Nombre de usuario:</ins> @$callbackusername
+- <ins>Tipo de usuario:</ins> <b>Free User</b>
 ━━━━━━━━━━━━━=
 <b>$date1 $time</b>",
       'parse_mode'=>'html',

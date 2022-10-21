@@ -24,7 +24,7 @@ if(strpos($message, "/key ") === 0 || strpos($message, "!key ") === 0){
     if($antispam != False){
       bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"[<u>ANTI SPAM</u>] Try again after <b>$antispam</b>s.",
+        'text'=>"[<u>ANTI SPAM</u>] Vuelve a intentar despues de <b>$antispam</b>s.",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id
       ]);
@@ -33,7 +33,7 @@ if(strpos($message, "/key ") === 0 || strpos($message, "!key ") === 0){
     }else{
         $messageidtoedit1 = bot('sendmessage',[
           'chat_id'=>$chat_id,
-          'text'=>"<b>Wait for Result...</b>",
+          'text'=>"<b>Espera un momento...</b>",
           'parse_mode'=>'html',
           'reply_to_message_id'=> $message_id
 
@@ -74,7 +74,7 @@ Response -» Provided Secret Key is Alive
 Time -» <b>$time</b><b>s</b></b>
 
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/KoddyL'>ak018</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
@@ -89,7 +89,7 @@ Response -» Provided Secret Key is Dead
 Time -» <b>$time</b><b>s</b></b>
 
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/KoddyL'>ak018</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
@@ -99,9 +99,9 @@ Time -» <b>$time</b><b>s</b></b>
           bot('editMessageText',[
             'chat_id'=>$chat_id,
             'message_id'=>$messageidtoedit,
-            'text'=>"<b>Never Gonna Give you Up!
+            'text'=>"<b>¡Nunca va a dar!
 
-Provide a Valid SK KEYYYY!</b>",
+¡Proporcione una SK KEYYYY válida!</b>",
             'parse_mode'=>'html',
             'disable_web_page_preview'=>'true'
             

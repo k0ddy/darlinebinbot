@@ -25,7 +25,7 @@ if(strpos($message, "/apikey ") === 0 || strpos($message, "!apikey ") === 0){
     if($antispam != False){
       bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"[<u>ANTI SPAM</u>] Try again after <b>$antispam</b>s.",
+        'text'=>"[<u>ANTI SPAM</u>] Vuelve a intentar despues de <b>$antispam</b>s.",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id
       ]);
@@ -34,7 +34,7 @@ if(strpos($message, "/apikey ") === 0 || strpos($message, "!apikey ") === 0){
     }else{
         $messageidtoedit1 = bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"<b>Wait for Result...</b>",
+        'text'=>"<b>Espera un momento...</b>",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id]);
 
@@ -48,7 +48,7 @@ if(strpos($message, "/apikey ") === 0 || strpos($message, "!apikey ") === 0){
                 bot('editMessageText',[
                     'chat_id'=>$chat_id,
                     'message_id'=>$messageidtoedit,
-                    'text'=>"<b>This SK Key is same as your Existing SK Key!</b>",
+                    'text'=>"<b>¡Esta clave SK es la misma que su clave SK existente!</b>",
                     'parse_mode'=>'html',
                     'disable_web_page_preview'=>'true'
                     
@@ -74,8 +74,8 @@ if(strpos($message, "/apikey ") === 0 || strpos($message, "!apikey ") === 0){
                 bot('editMessageText',[
                     'chat_id'=>$chat_id,
                     'message_id'=>$messageidtoedit,
-                    'text'=>"<b>✅ Successfully Added Your API Key!
-You can now check cards using /schk</b>",
+                    'text'=>"<b>✅ ¡Agregó con éxito su clave API!
+Ahora puede verificar las tarjetas usando /schk</b>",
                     'parse_mode'=>'html',
                     'disable_web_page_preview'=>'true'
                     
@@ -92,7 +92,7 @@ You can now check cards using /schk</b>",
                 bot('editMessageText',[
                     'chat_id'=>$chat_id,
                     'message_id'=>$messageidtoedit,
-                    'text'=>"<b>This SK Key is Dead! Provide me a Live SK Key</b>",
+                    'text'=>"<b>¡Esta llave SK está muerta! Dame una clave de Live SK</b>",
                     'parse_mode'=>'html',
                     'disable_web_page_preview'=>'true'
                     
@@ -102,7 +102,7 @@ You can now check cards using /schk</b>",
             bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"<b>Cool! Fucking provide a SK Key!</b>",
+                'text'=>"<b>¡XDNT! ¡Maldita sea, proporciona una clave SK!</b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
@@ -119,7 +119,7 @@ if(strpos($message, "/myapikey") === 0 || strpos($message, "!myapikey") === 0){
     if($antispam != False){
       bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"[<u>ANTI SPAM</u>] Try again after <b>$antispam</b>s.",
+        'text'=>"[<u>ANTI SPAM</u>] Vuelve a intentar despues de <b>$antispam</b>s.",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id
       ]);
@@ -130,7 +130,7 @@ if(strpos($message, "/myapikey") === 0 || strpos($message, "!myapikey") === 0){
 
         if($chattype != 'private'){
             $apikey = substr_replace($apikey, '',12).preg_replace("/(?!^).(?!$)/", "*", substr($apikey, 12));
-            $secmessage = "<b>Use the Command in PM to get your full SK Key.</b>";
+            $secmessage = "<b>Use el comando en mensaje privado para obtener su clave SK completa.</b>";
         }
         
         bot('sendmessage',[
